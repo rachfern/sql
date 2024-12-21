@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Let Architecture 1 be the table where you retain changes (representing type 1). Each customer has one row in the table, and when the customer changes their address, the new address overwrites the old address.
+
+Let Architecture 2 be the table where you retain changes (representing type 2). Each address change by a customer, creates a new row in the table with a start date and end date columns defining it's validity period. 
 ```
 
 ***
